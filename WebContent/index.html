@@ -62,87 +62,72 @@
 		</div>
 	</div>
 	<!--News Page end-->
-	<!-- 菜單頁 -->
-	<div data-role="page" id="product">
-		<div data-role="main" class="ui-content" data-theme="b">
-			<ol data-role="listview" data-inset="true" data-filter="true"
-				data-filter-placeholder="請搜尋品名:" id="searchMenu" class="listview1">
-				<!-- 菜單產生區 -->
-			</ol>
-			<br /> <a href="#orderPage"
-				class="ui-btn ui-btn-b ui-corner-all ui-btn-inline ui-mini footer-button-right ui-btn-icon-right ui-icon-carat-r"
-				id="btnConfirm" data-transition="slide">訂單確認</a>
-		</div>
-		<div data-role="popup" id="addPopup" class="ui-content" data-theme="a">
-			<label for="orderNumber">請輸入餐點數量:</label> <input type="number" input
-				type="number" name="orderNumber" id="orderNumber" value="1"
-				data-clear-btn="true">
-			<div id="popCondition">
-				<!--選單條件產生區-->
-			</div>
-			<a href="#"
-				class="ui-btn ui-btn-c ui-corner-all ui-shadow ui-icon-check ui-btn-icon-left"
-				id="joinOrder">加入訂單</a> <a href="#"
-				class="ui-btn ui-btn-c ui-corner-all ui-shadow ui-icon-back ui-btn-icon-left"
-				data-rel="back">取消點餐</a>
-		</div>
-		<div data-role="footer" data-position="fixed" id="menuFooter"
-			data-theme="b">
-			<div data-role="navbar">
-				<ul>
-					<li><a href="#enterPage" data-icon="search" data-theme="b">首頁</a></li>
-					<li><a href="#product" data-icon="bullets" data-theme="c"
-						data-transition="slide">產品資訊</a></li>
-					<li><a href="#shop" data-icon="clock" data-theme="b"
-						data-transition="slide">店家資訊</a></li>
-					<li><a href="#member" data-icon="bullets" data-theme="b"
-						data-transition="slide">會員</a></li>
-					<li><a href="#issue" data-icon="clock" data-theme="b"
-						data-transition="slide">問題回報</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
-	<!-- 菜單頁結束 -->
-	<!-- 訂單頁 -->
-	<div data-role="page" id="orderPage">
-		<div data-role="main" class="ui-content" id="orderContent">
-			<div id="set0">
-				<h3>您點選的訂單如下:</h3>
-			</div>
-			<!-- 訂單產生區 -->
-		</div>
-		<div data-role="footer" data-position="fixed" data-theme="b">
-			<a href="#product"
-				class="ui-btn ui-corner-all ui-btn-inline ui-mini footer-button-left ui-btn-icon-left ui-icon-refresh"
-				id="btnClearOrder">清除訂單</a> <a href="#confirmPopup" data-rel="popup"
-				class="ui-btn ui-corner-all ui-btn-inline ui-mini footer-button-right ui-btn-icon-right ui-icon-carat-r"
-				id="btnConfirmOrder" data-transition="slideup">訂單確認</a>
-			<div data-role="navbar">
-				<ul>
-					<li><a href="#enterPage" data-icon="search" data-theme="b">首頁</a></li>
-					<li><a href="#product" data-icon="bullets" data-theme="c"
-						data-transition="slide">產品資訊</a></li>
-					<li><a href="#shop" data-icon="clock" data-theme="b"
-						data-transition="slide">店家資訊</a></li>
-					<li><a href="#member" data-icon="bullets" data-theme="b"
-						data-transition="slide">會員</a></li>
-					<li><a href="#issue" data-icon="clock" data-theme="b"
-						data-transition="slide">問題回報</a></li>
-				</ul>
-			</div>
-		</div>
-		<div data-role="popup" id="confirmPopup" class="ui-content"
-			data-theme="c" data-dismissible="false">
-			<label for="orderNumber">還需要別的嗎?</label> <a href="#workPage"
-				class="ui-btn ui-corner-all ui-shadow ui-icon-check ui-btn-icon-left"
-				id="btnCheckPay" data-transition="slide" data-theme="c">確認付款</a> <a
-				href="#"
-				class="ui-btn ui-corner-all ui-shadow ui-icon-back ui-btn-icon-left"
-				data-rel="back" id="btnCancelPay" data-theme="c">還想加點</a>
-		</div>
-	</div>
-	<!--訂單頁結束 -->
+	 <!-- 菜單頁 -->
+    <div data-role="page" id="product">
+        <div data-role="main" class="ui-content" data-theme="b">
+            <ol data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="請搜尋品名:" id="searchMenu" class="listview1">
+                <!-- 菜單產生區 -->
+            </ol>
+            <br />
+            <a href="#orderPage" class="ui-btn ui-btn-b ui-corner-all ui-btn-inline ui-mini footer-button-right ui-btn-icon-right ui-icon-carat-r" id="btnConfirm" data-transition="slide">訂單確認</a>
+        </div>
+        <div data-role="popup" id="addPopup" class="ui-content" data-theme="a">
+            <label for="orderNumber">請輸入餐點數量:</label>
+            <input type="number" type="number" name="orderNumber" id="orderNumber" value="1" data-clear-btn="true">
+            <div id="popCondition">
+                <!--選單條件產生區-->
+            </div>
+            <a href="#" class="ui-btn ui-btn-c ui-corner-all ui-shadow ui-icon-check ui-btn-icon-left" id="joinOrder">加入訂單</a>
+            <a href="#" class="ui-btn ui-btn-c ui-corner-all ui-shadow ui-icon-back ui-btn-icon-left" data-rel="back">取消點餐</a>
+        </div>
+        <div data-role="footer" data-position="fixed" id="menuFooter" data-theme="b">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#enterPage" data-icon="search" data-theme="b">首頁</a></li>
+                    <li><a href="#product" data-icon="bullets" data-theme="c" data-transition="slide">產品資訊</a></li>
+                    <li><a href="#shop" data-icon="clock" data-theme="b" data-transition="slide">店家資訊</a></li>
+                    <li><a href="#member" data-icon="bullets" data-theme="b" data-transition="slide">會員</a></li>
+                    <li><a href="#issue" data-icon="clock" data-theme="b" data-transition="slide">問題回報</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 菜單頁結束 -->
+    <!-- 訂單頁 -->
+    <div data-role="page" id="orderPage">
+        <div data-role="main" class="ui-content" id="orderContent">
+            <div id="set0">
+                <h3>您點選的訂單如下:</h3>
+            </div>
+            <!-- 訂單產生區 -->
+        </div>
+        <div data-role="controlgroup" data-type="horizontal" data-theme='b' id="group_dispatch">
+            <input type="radio" name="radio-choice-h-2" id="radio-choice-h-2a" value="on" checked="checked">
+            <label for="radio-choice-h-2a">自取</label>
+            <input type="radio" name="radio-choice-h-2" id="radio-choice-h-2b" value="off">
+            <label for="radio-choice-h-2b">外送</label>
+        </div>
+        <div data-role="footer" data-position="fixed" data-theme="b">
+            <a href="#product" class="ui-btn ui-corner-all ui-btn-inline ui-mini footer-button-left ui-btn-icon-left ui-icon-refresh" id="btnClearOrder">還想加點</a>
+            <a href="#confirmPopup" data-rel="popup" class="ui-btn ui-corner-all ui-btn-inline ui-mini footer-button-right ui-btn-icon-right ui-icon-carat-r" id="btnConfirmOrder" data-transition="slideup">訂單確認</a>
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#enterPage" data-icon="search" data-theme="b">首頁</a></li>
+                    <li><a href="#product" data-icon="bullets" data-theme="c" data-transition="slide">產品資訊</a></li>
+                    <li><a href="#shop" data-icon="clock" data-theme="b" data-transition="slide">店家資訊</a></li>
+                    <li><a href="#member" data-icon="bullets" data-theme="b" data-transition="slide">會員</a></li>
+                    <li><a href="#issue" data-icon="clock" data-theme="b" data-transition="slide">問題回報</a></li>
+                </ul>
+            </div>
+        </div>
+        <div data-role="popup" id="confirmPopup" class="ui-content" data-theme="c" data-dismissible="false">
+            <label for="orderNumber">還需要別的嗎?</label>
+            <a href="#workPage" class="ui-btn ui-corner-all ui-shadow ui-icon-check ui-btn-icon-left" id="btnCheckPay" data-transition="slide" data-theme="c">確認付款</a>
+            <a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-back ui-btn-icon-left" data-rel="back" id="btnCancelPay" data-theme="c">還想加點</a>
+        </div>
+    </div>
+    <!--訂單頁結束 -->
+    <script src="js/product.js"></script>
 	<!--店家資訊 -->
 	<div data-role="page" id="shop" data-theme="c">
 		<!--map-->
@@ -392,4 +377,5 @@
 	<script src="js/member.js"></script>
 	<script src="js/issue.js"></script>
 	<script src="js/newsUpdate.js"></script>
+	<script src="js/product.js"></script>
 </body>
