@@ -6,7 +6,7 @@ function getNewsupdate(){
 	var contenDivEnd ="</div>";	
 	var fullDivContent;
 	$.ajax({
-		async : true, //需同步處理嗎?
+		async : false, //需同步處理嗎,同步處理，jquery的格式才會出來
 		type : "POST",
 		url : "http://127.0.0.1:8080/DrinkApp/getNews",
 		success : function(data){
