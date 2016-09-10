@@ -149,9 +149,8 @@ function addOrderItems() {
 				+ jsonCoordinate[i].qty + "</p>";
 	}
 	appends += "</div>";
-	
 	$("#orderItems").append(appends);
-	
+	$('div[data-role=collapsible]').collapsible();
 }
 
 function getOrderData(account) {
