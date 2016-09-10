@@ -39,7 +39,14 @@ $(document).ready(function(){
 		$("#welcomePage").css('height',$(window).height());
 		$("#welcomImgDiv").css('width',$(window).width());
 		$("#welcomImgDiv").css('height',$(window).height());
-//		alert($("#welcomePage").css('width',$(window).width()));
+		
+		$("#shop").css('width',$(window).width());
+		$("#shop").css('height',$(window).height());
+		$("#divFmap").css('width',$(window).width());
+		$("#divFmap").css('height','80%');
+		
+		$("#googleMap").css('width','100%');
+		$("#googleMap").css('height','100%');
 	})
 })
 		
