@@ -14,13 +14,13 @@ var isUniqueId;
 //var editMemberUrl = "http://59.127.112.147:8080/DrinkApp/EditMemberSQL?id=";
 //var checkPasswordUrl = "http://59.127.112.147:8080/DrinkApp/CheckPasswordSQL?password=";
 
-var queryUniIdurl = "http://127.0.0.1:8080/DrinkApp/MemberSQL?id=";
-var loginUrl = "http://127.0.0.1:8080/DrinkApp/LoginSQL?";
-var registerUrl = "http://127.0.0.1:8080/DrinkApp/AddNewUser"
-var orderDataUrl = "http://127.0.0.1:8080/DrinkApp/OrderDataSQL?id="
-var userNameUrl = "http://127.0.0.1:8080/DrinkApp/UserNameSQL?id=";
-var editMemberUrl = "http://127.0.0.1:8080/DrinkApp/EditMemberSQL?id=";
-var checkPasswordUrl = "http://127.0.0.1:8080/DrinkApp/CheckPasswordSQL?password=";
+var queryUniIdurl = "http://10.1.6.54:8080/DrinkApp/MemberSQL?id=";
+var loginUrl = "http://10.1.6.54:8080/DrinkApp/LoginSQL?";
+var registerUrl = "http://10.1.6.54:8080/DrinkApp/AddNewUser"
+var orderDataUrl = "http://10.1.6.54:8080/DrinkApp/OrderDataSQL?id="
+var userNameUrl = "http://10.1.6.54:8080/DrinkApp/UserNameSQL?id=";
+var editMemberUrl = "http://10.1.6.54:8080/DrinkApp/EditMemberSQL?id=";
+var checkPasswordUrl = "http://10.1.6.54:8080/DrinkApp/CheckPasswordSQL?password=";
 function checkUniqueId(val) {
 	if (val != "") {
 		$.ajax({
@@ -190,11 +190,12 @@ function goToEditMember() {
 			$("#editAddress").val(jsonCoordinate[0].address);
 			$("#editTel").val(jsonCoordinate[0].tel);
 			if (jsonCoordinate[0].gender == "男") {
-				$("#male").prop("checked", true);
+				$("#male").attr("checked",true).checkboxradio("refresh");
 			} else {
-
-				$("#female").prop("checked", true);
+				$("#female").attr("checked",true).checkboxradio("refresh");
 			}
+			
+			
 		}
 	});
 	$("#memberDetail").hide();
