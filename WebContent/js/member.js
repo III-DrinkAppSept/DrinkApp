@@ -4,23 +4,24 @@ var registerPassword1;
 var registerPassword2;
 var name;
 var address;
+var orderAdress;
 var tel;
 var isUniqueId;
-//var queryUniIdurl = "http://59.127.112.147:8080/DrinkApp/MemberSQL?id=";
-//var loginUrl = "http://59.127.112.147:8080/DrinkApp/LoginSQL?";
-//var registerUrl = "http://59.127.112.147:8080/DrinkApp/AddNewUser"
-//var orderDataUrl = "http://59.127.112.147:8080/DrinkApp/OrderDataSQL?id="
-//var userNameUrl = "http://59.127.112.147:8080/DrinkApp/UserNameSQL?id=";
-//var editMemberUrl = "http://59.127.112.147:8080/DrinkApp/EditMemberSQL?id=";
-//var checkPasswordUrl = "http://59.127.112.147:8080/DrinkApp/CheckPasswordSQL?password=";
+var queryUniIdurl = "http://59.127.112.147:8080/DrinkApp/MemberSQL?id=";
+var loginUrl = "http://59.127.112.147:8080/DrinkApp/LoginSQL?";
+var registerUrl = "http://59.127.112.147:8080/DrinkApp/AddNewUser"
+var orderDataUrl = "http://59.127.112.147:8080/DrinkApp/OrderDataSQL?id="
+var userNameUrl = "http://59.127.112.147:8080/DrinkApp/UserNameSQL?id=";
+var editMemberUrl = "http://59.127.112.147:8080/DrinkApp/EditMemberSQL?id=";
+var checkPasswordUrl = "http://59.127.112.147:8080/DrinkApp/CheckPasswordSQL?password=";
 
-var queryUniIdurl = "http://10.1.6.54:8080/DrinkApp/MemberSQL?id=";
-var loginUrl = "http://10.1.6.54:8080/DrinkApp/LoginSQL?";
-var registerUrl = "http://10.1.6.54:8080/DrinkApp/AddNewUser"
-var orderDataUrl = "http://10.1.6.54:8080/DrinkApp/OrderDataSQL?id="
-var userNameUrl = "http://10.1.6.54:8080/DrinkApp/UserNameSQL?id=";
-var editMemberUrl = "http://10.1.6.54:8080/DrinkApp/EditMemberSQL?id=";
-var checkPasswordUrl = "http://10.1.6.54:8080/DrinkApp/CheckPasswordSQL?password=";
+//var queryUniIdurl = "http://10.1.6.54:8080/DrinkApp/MemberSQL?id=";
+//var loginUrl = "http://10.1.6.54:8080/DrinkApp/LoginSQL?";
+//var registerUrl = "http://10.1.6.54:8080/DrinkApp/AddNewUser"
+//var orderDataUrl = "http://10.1.6.54:8080/DrinkApp/OrderDataSQL?id="
+//var userNameUrl = "http://10.1.6.54:8080/DrinkApp/UserNameSQL?id=";
+//var editMemberUrl = "http://10.1.6.54:8080/DrinkApp/EditMemberSQL?id=";
+//var checkPasswordUrl = "http://10.1.6.54:8080/DrinkApp/CheckPasswordSQL?password=";
 function checkUniqueId(val) {
 	if (val != "") {
 		$.ajax({
@@ -174,6 +175,7 @@ function getUserName(account) {
 		success : function(data) {
 			jsonCoordinate = JSON.parse(data);
 			var memberName = jsonCoordinate[0].memberName;
+			orderAdress = jsonCoordinate[0].memberAddress;
 			$("#memberName").html("你好:" + memberName);
 		}
 	});

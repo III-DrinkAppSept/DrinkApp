@@ -234,7 +234,7 @@ public class SQLApi {
 		setDBProp();
 		String data = "";
 		try{
-			pstmt = con.prepareStatement("SELECT memberName FROM member WHERE customerId = ?");
+			pstmt = con.prepareStatement("SELECT memberName,address FROM member WHERE customerId = ?");
 			pstmt.setString(1,account);
 			ResultSet rs = pstmt.executeQuery();
 			JSONArray all = new JSONArray();
@@ -242,7 +242,9 @@ public class SQLApi {
 			while(rs.next()) {
 				JSONObject jsonRow = new JSONObject();
 				String name = rs.getString("memberName");
+				String address = rs.getString("address");
 				jsonRow.put("memberName", name);
+				jsonRow.put("memberAddress", address);
 				all.put(jsonRow);
 			}
 			data = all.toString();
@@ -369,7 +371,7 @@ public class SQLApi {
 		setDBProp();
 		String data = "";
 		try{
-			pstmt = con.prepareStatement("INSERT INTO issue(customerId,complaint,note)VALUES(?,?,?)");
+			pstmt = con.prepareStatement("INSERT INTO issue(customerId,complaint,note,price)VALUES(?,?,?,0)");
 			pstmt.setString(1,account);
 			pstmt.setString(2,content);
 			pstmt.setString(3,tel);

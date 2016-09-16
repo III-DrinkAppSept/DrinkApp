@@ -356,8 +356,8 @@ $('#btnConfirm').click(function() {
 });
 
 //ajax
-var url_orderlist = "http://127.0.0.1:8080/app/SendOrderList?";
-var url_orderitem = "http://127.0.0.1:8080/app/SendOrderItem?";
+var url_orderlist = "http://59.127.112.147:8080/app/SendOrderList?";
+var url_orderitem = "http://59.127.112.147:8080/app/SendOrderItem?";
 
 
 function SendOrderList(orderNum, customerId, orderDate, status, dispatch,note) {

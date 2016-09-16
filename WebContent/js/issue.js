@@ -1,5 +1,5 @@
-//var issueUrl = "http://59.127.112.147:8080/DrinkApp/IssueSQL?id=";
-var issueUrl = "http://127.0.0.1:8080/DrinkApp/IssueSQL?id=";
+var issueUrl = "http://59.127.112.147:8080/DrinkApp/IssueSQL?id=";
+//var issueUrl = "http://127.0.0.1:8080/DrinkApp/IssueSQL?id=";
 function sendIssue(){
 	if($("#issueName").val() == "" || $("#issueTel").val() == "" || $("#issueContent").val() == ""){
 		$("#issueStatus").html("欄位不可為空白");

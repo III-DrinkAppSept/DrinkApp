@@ -6,7 +6,7 @@ function getNewsupdate(){
 	$.ajax({
 		async : false, //同步處理，jquery的格式才會出來
 		type : "POST",
-		url : "http://127.0.0.1:8080/DrinkApp/getNews",
+		url : "http://59.127.112.147:8080/DrinkApp/getNews",
 		success : function(data){
 			jsonCoordinate = JSON.parse(data);
 //			alert("length: "+jsonCoordinate.length);
