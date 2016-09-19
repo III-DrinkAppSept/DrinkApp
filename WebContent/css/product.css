@@ -1,3 +1,4 @@
+.footer-button-center,
 .footer-button-left,
 .footer-button-right {
     position: fixed;
@@ -14,6 +15,9 @@
 .footer-button-right {
     right: 0.4em;
 }
+.footer-button-center{
+    left:43%;
+}
 .count-second {
     right: 3em !important;
 }
@@ -22,4 +26,19 @@
     right: 5em !important;
 }
 
-
+#group_dispatch,#dispatch_address{
+	padding-left: 1em;
+}
+#total_price{
+	font-size: 1.5em;
+	font-family: ·L³n¥¿¶ÂÅé;
+	font-weight: bolder;
+    padding-top: 1em;
+    padding-left: 75%;
+}
+.delete-confirm{
+    text-align: center;
+}
+#dispatch_address{
+    width: 25em;
+}
