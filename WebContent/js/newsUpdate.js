@@ -6,7 +6,7 @@ function getNewsupdate(){
 	$.ajax({
 		async : false, //同步處理，jquery的格式才會出來
 		type : "POST",
-		url : "http://192.168.1.102:8080/DrinkApp/getNews",
+		url : "http://10.1.6.68:8080/DrinkApp/getNews",
 		success : function(data){
 			jsonCoordinate = JSON.parse(data);
 //			alert("length: "+jsonCoordinate.length);
@@ -20,7 +20,7 @@ function getNewsupdate(){
 //				alert("i: "+i+" title: "+title+" content: "+content+" publish: "+publish);
 				if(publish == "1"){
 					fullDivContent = contenDiv+ "<h2>"+title+"</h2> "+
-					"<img style='height:200px;' src='./image/"+picName+"'> "+"<p style='font-size:10pt; text-align:left;'>"+content+"</p> " +contenDivEnd;			
+					"<img style='height:200px; width:80%;' src='./image/"+picName+"'> "+"<p style='font-size:10pt; text-align:left;'>"+content+"</p> " +contenDivEnd;			
 //					alert("fullDiv: "+fullDiv);
 					$("#newsHere").append(fullDivContent);
 				}
@@ -49,14 +49,7 @@ $(document).ready(function(){
 			'width':$(window).width(),
 			'height':$(window).height()
 		});
-		
-		$("#teaLogoImg").css({
-			'width':'100%',
-			'height':'100%',
-			'vertical-align':'middle'
-			
-		})
-		
+				
 		
 		//map resized
 		$("#divFmap").css({
