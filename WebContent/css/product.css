@@ -42,3 +42,11 @@
 #dispatch_address{
     width: 25em;
 }
+
+<!-- logo RWD-->
+@media (max-width: 479px) {
+	$("#teaLogoImg").css({
+		'width': 80%,
+		'height': 80%
+	});
+}

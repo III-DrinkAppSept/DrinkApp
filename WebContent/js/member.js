@@ -7,13 +7,13 @@ var address;
 var orderAdress;
 var tel;
 var isUniqueId;
-var queryUniIdurl = "http://127.0.0.1:8080/DrinkApp/MemberSQL?id=";
-var loginUrl = "http://127.0.0.1:8080/DrinkApp/LoginSQL?";
-var registerUrl = "http://127.0.0.1:8080/DrinkApp/AddNewUser"
-var orderDataUrl = "http://127.0.0.1:8080/DrinkApp/OrderDataSQL?id="
-var userNameUrl = "http://127.0.0.1:8080/DrinkApp/UserNameSQL?id=";
-var editMemberUrl = "http://127.0.0.1:8080/DrinkApp/EditMemberSQL?id=";
-var checkPasswordUrl = "http://127.0.0.1:8080/DrinkApp/CheckPasswordSQL?password=";
+var queryUniIdurl = "http://192.168.1.102:8080/DrinkApp/MemberSQL?id=";
+var loginUrl = "http://192.168.1.102:8080/DrinkApp/LoginSQL?";
+var registerUrl = "http://192.168.1.102:8080/DrinkApp/AddNewUser"
+var orderDataUrl = "http://192.168.1.102:8080/DrinkApp/OrderDataSQL?id="
+var userNameUrl = "http://192.168.1.102:8080/DrinkApp/UserNameSQL?id=";
+var editMemberUrl = "http://192.168.1.102:8080/DrinkApp/EditMemberSQL?id=";
+var checkPasswordUrl = "http://192.168.1.102:8080/DrinkApp/CheckPasswordSQL?password=";
 
 //var queryUniIdurl = "http://10.1.6.54:8080/DrinkApp/MemberSQL?id=";
 //var loginUrl = "http://10.1.6.54:8080/DrinkApp/LoginSQL?";
