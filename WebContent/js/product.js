@@ -561,8 +561,8 @@ function check_merged(val) {
     return true;
 }
 //ajax
-var url_orderlist = "http://10.1.6.68:8080/DrinkApp/SendOrderList?";
-var url_orderitem = "http://10.1.6.68:8080/DrinkApp/SendOrderItem?";
+var url_orderlist = "http://1.170.146.243:8080/DrinkApp/SendOrderList?";
+var url_orderitem = "http://1.170.146.243:8080/DrinkApp/SendOrderItem?";
 
 
 function SendOrderList(orderNum, customerId, orderDate, status, dispatch, note) {
