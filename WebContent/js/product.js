@@ -39,7 +39,7 @@ var menuData3 = [
     { "name": "京都抹茶", "price_large": 55, "price_medium": 50, "unit": "" },
     { "name": "抹茶紅豆", "price_large": 60, "price_medium": 55, "unit": "" },
     { "name": "宇治抹茶", "price_large": 60, "price_medium": 55, "unit": "" },
-    { "name": "宙治抹茶", "price_large": 60, "price_medium": 55, "unit": "" },
+    { "name": "明治抹茶", "price_large": 60, "price_medium": 55, "unit": "" },
     { "name": "抹茶可可", "price_large": 50, "price_medium": 45, "unit": "" }
 ];
 var menuData4 = [
@@ -386,7 +386,7 @@ var merged_Nums = [];//用來紀錄已被合併訂單號碼
 function mergeOrderList() {
     for (var i = 0; i < order_items.length; i++) {
         for (var j = 0; j < i; j++) {
-            if (check_deleted(j) && check_merged(j)) {
+            if (check_deleted(j) && check_merged(j) && check_merged(i)) {
                 if (order_items[i].name == order_items[j].name) {
                     //將名稱重複的取出來跟上一筆合併，並刪除
                     var del = $('#order_content_' + i);
@@ -561,8 +561,8 @@ function check_merged(val) {
     return true;
 }
 //ajax
-var url_orderlist = "http://1.170.146.243:8080/DrinkApp/SendOrderList?";
-var url_orderitem = "http://1.170.146.243:8080/DrinkApp/SendOrderItem?";
+var url_orderlist = "http://127.0.0.1:8080/DrinkApp/SendOrderList?";
+var url_orderitem = "http://127.0.0.1:8080/DrinkApp/SendOrderItem?";
 
 
 function SendOrderList(orderNum, customerId, orderDate, status, dispatch, note) {
