@@ -7,13 +7,13 @@ var address;
 var orderAdress;
 var tel;
 var isUniqueId;
-var queryUniIdurl = "http://1.170.146.243:8080/DrinkApp/MemberSQL?id=";
-var loginUrl = "http://1.170.146.243:8080/DrinkApp/LoginSQL?";
-var registerUrl = "http://1.170.146.243:8080/DrinkApp/AddNewUser"
-var orderDataUrl = "http://1.170.146.243:8080/DrinkApp/OrderDataSQL?id="
-var userNameUrl = "http://1.170.146.243:8080/DrinkApp/UserNameSQL?id=";
-var editMemberUrl = "http://1.170.146.243:8080/DrinkApp/EditMemberSQL?id=";
-var checkPasswordUrl = "http://1.170.146.243:8080/DrinkApp/CheckPasswordSQL?password=";
+var queryUniIdurl = "http://59.127.112.147:8080/DrinkApp/MemberSQL?id=";
+var loginUrl = "http://59.127.112.147:8080/DrinkApp/LoginSQL?";
+var registerUrl = "http://59.127.112.147.243:8080/DrinkApp/AddNewUser"
+var orderDataUrl = "http://59.127.112.147:8080/DrinkApp/OrderDataSQL?id="
+var userNameUrl = "http://59.127.112.147:8080/DrinkApp/UserNameSQL?id=";
+var editMemberUrl = "http://59.127.112.147:8080/DrinkApp/EditMemberSQL?id=";
+var checkPasswordUrl = "http://59.127.112.147:8080/DrinkApp/CheckPasswordSQL?password=";
 
 //var queryUniIdurl = "http://10.1.6.54:8080/DrinkApp/MemberSQL?id=";
 //var loginUrl = "http://10.1.6.54:8080/DrinkApp/LoginSQL?";
@@ -78,6 +78,7 @@ function login() {
 				window.location = "index.html#member";
 				getUserName(loginAccount);
 				getOrderData(loginAccount);
+				
 			} else {
 				$("#loginCheck").html("帳號或密碼錯誤");
 			}
@@ -136,6 +137,7 @@ function addOrderItems() {
 	var title = "<div data-role='collapsible'>";
 	var appends = "";
 	var orderNum = "";
+	$("#orderItems").empty();
 	for (var i = 0; i < jsonCoordinate.length; i++) {
 		
 		if (orderNum != jsonCoordinate[i].orderNum) {

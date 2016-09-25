@@ -22,7 +22,7 @@
 <body>
 	<!-- WelcomePage -->
 	<div data-role="page" id="welcomePage" data-theme="c">
-		<div data-role="content" id="welcomImgDiv" style="height:60%; position: absolute; vertical-align: middle; top: 18%;">
+		<div data-role="content" id="welcomImgDiv" style="height:100%; vertical-align: middle;">
 			<a href="#enterPage">
 				<img id="teaLogoImg" src="image/drink.png" width="100%"	height="100%" style="vertical-align: middle" onclick="getNewsupdate()">
 			</a>
@@ -230,7 +230,6 @@
 				<input type="password"
 						name="editNewPassword" id="editNewPassword"
 						class="ui-btn ui-btn-inline ui-corner-all ui-shadow ui-icon-heart ui-btn-icon-left">	
-				<label for="editGender">性別:</label>
 				<fieldset data-role="controlgroup" data-type="horizontal" data-iconpos="right">
 					<legend>性別:</legend>
 					<input type="radio" name="editGender" id="male" value="男"
@@ -339,7 +338,10 @@
 					<br> <label for="registerTel">電話:</label> <input type="tel"
 						name="registerTel" id="registerTel"
 						class="ui-btn ui-btn-inline ui-corner-all ui-shadow ui-icon-heart ui-btn-icon-left">
-					<label for="verification" id="registerStatus">註冊狀態</label>
+					<label for="verification" id="verification">驗證碼:</label> <input
+						type="text" name="verificationNum" id="verificationNum"
+						class="ui-btn ui-btn-inline ui-corner-all ui-shadow ui-icon-heart ui-btn-icon-left"
+						readonly> <label for="verification" id="registerStatus">註冊狀態</label>
 					<br> <a href="#"
 						class="ui-btn ui-btn-inline ui-corner-all ui-shadow ui-icon-heart ui-btn-icon-left"
 						data-transition="slide" id="btnVerification" data-theme="c">驗證號碼</a>
@@ -389,7 +391,7 @@
 			</div>
 		</div>
 	</div>
-	<!-- <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyD5BQHnwmRr53yqN_M2c3XwXDhes1Pw82U"></script> -->
+	<!-- <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDzWQYYtGASKg62h1h3eJ6iyUMYoOjYD9M"></script> -->
 	<script src="js/shop.js"></script>
 	<script src="js/member.js"></script>
 	<script src="js/issue.js"></script>

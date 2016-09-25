@@ -561,8 +561,8 @@ function check_merged(val) {
     return true;
 }
 //ajax
-var url_orderlist = "http://127.0.0.1:8080/DrinkApp/SendOrderList?";
-var url_orderitem = "http://127.0.0.1:8080/DrinkApp/SendOrderItem?";
+var url_orderlist = "http://59.127.112.147:8080/DrinkApp/SendOrderList?";
+var url_orderitem = "http://59.127.112.147:8080/DrinkApp/SendOrderItem?";
 
 
 function SendOrderList(orderNum, customerId, orderDate, status, dispatch, note) {
@@ -611,7 +611,7 @@ $('#btnCheckPay').click(function() {
     //訂單編號
     var listNum = loginAccount + mydate.getFullYear() + month + mydate.getDate() + mydate.getHours() + mydate.getMinutes() + mydate.getSeconds();
     var label_dispatch = $('label[for="' + $("#group_dispatch input:checked").attr('id') + '"]').text();
-    var note = '';//住址
+    var note = orderAdress;//住址
     var orderDate = mydate.getFullYear() + "/" + month + "/" + mydate.getDate() + " " + mydate.getHours() + ":" + mydate.getMinutes() + ":" + mydate.getSeconds();
     SendOrderList(listNum, loginAccount, orderDate, '新訂單', label_dispatch, note);
     for (var i = 0; i < order_items.length; i++) { 
@@ -619,6 +619,8 @@ $('#btnCheckPay').click(function() {
             SendOrderItem(listNum, order_items[i]);
         }
     }
+    getOrderData(loginAccount);
+    $.mobile.changePage("#member");
     console.log('OK');
 
 });
